@@ -36,6 +36,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.ui.text.toUpperCase
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,7 +79,7 @@ fun mainScreen(modifier: Modifier = Modifier) {
             )
         Text(resultText)
         Button(onClick ={
-            resultText=findStudentById(searchText,studentList)
+            resultText=findStudentById(searchText.toUpperCase(),studentList)
         }
         ) {
             Text("Tìm kiếm")
