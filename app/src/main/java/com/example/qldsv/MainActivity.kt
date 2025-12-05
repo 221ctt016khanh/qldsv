@@ -68,7 +68,7 @@ fun mainScreen(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally,
 
 
-    ){
+    ){  Text("Quản lí điểm sinh viên")
         OutlinedTextField(
             value = searchText,
             onValueChange = { searchText = it },
